@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- one of the properties available; the maximum file size in bytes -->
+		<property name="maxUploadSize" value="5000000" />
+	</bean>
+		
+		
+	<bean id="orgDao" class="com.me.myapp.dao.OrganizationDAO" ></bean>
+	<bean id="empDao" class="com.me.myapp.dao.EmployeeDAO" ></bean>
+	
+	<bean id="roleDao" class="com.me.myapp.dao.RoleDAO" ></bean>
+	<bean id="adminDao" class="com.me.myapp.dao.AdminDAO" ></bean>
+	
+	<bean id="organizationValidator" class="com.me.myapp.validator.OrganizationValidator"></bean>
+	<bean id="employeeValidator" class="com.me.myapp.validator.EmployeeValidator"></bean>
+	<bean id="employeeLoginValidator" class="com.me.myapp.validator.EmployeeLoginValidator"></bean>
+	<bean id="adminUserAccountValidator" class="com.me.myapp.validator.AdminAccountValidator"></bean>
+	
+	<bean id="knowledgeChapterDao" class="com.me.myapp.dao.KnowledgeChapterDAO"></bean>
+	<bean id="annDao" class="com.me.myapp.dao.AnnouncementDAO"></bean>
+	<bean id="adminRegisterValidator" class="com.me.myapp.validator.AdminRegisterValidator"></bean>
+	<bean id="employeeRegisterValidator" class="com.me.myapp.validator.EmployeeRegisterValidator"></bean>
+ 	<bean id="contactDao" class="com.me.myapp.dao.ContactDAO"></bean>
+	<bean id="orgImageDao" class="com.me.myapp.dao.OrgImageDAO"></bean>
+</beans>

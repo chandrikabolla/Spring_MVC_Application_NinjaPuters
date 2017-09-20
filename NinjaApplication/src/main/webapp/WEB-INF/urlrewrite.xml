@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlrewrite>
+<rule>
+    <from>/org/savedNewEmployee</from>
+    <to type="redirect">%{context-path}/</to>
+</rule>
+</urlrewrite>

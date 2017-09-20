@@ -1,0 +1,43 @@
+
+<h2>About Us:</h2>
+<h3>We are $app.getAppName()  .</h3>
+#set($developers=$app.getDevelopers())
+#if(! $developers)
+ <h3>No Developers Found !</h3>      
+#elseif($developers.size()==0)
+  <h3>No Developers Found !</h3>       
+#else
+           <table border="1">
+                <tr>
+                    <th>Developer</th>
+                    
+                </tr>
+             #foreach($developer in $developers)
+                 <tr>
+		            <td> $developer</td>
+		           
+	            </tr>
+	        #end
+            </table>
+#end
+#set($versions=$app.getVersions())
+#if(! $versions)
+	<h3>Found no versions for this applications </h3>
+#elseif($versions.size()==0)
+	<h3>There are no versions for this app</h3>
+#else
+		<table border="1">
+		#foreach($version in $versions)
+			<tr>
+			<td>Version : 
+			</td>
+			<td>$version
+			</td> 
+			</tr>
+		#end
+		</table>
+#end
+
+<h3>This application was launched on $app.getLaunchDate()</h3>
+<h3>This application was last updated on $app.getLastUpdated()</h3>
+
