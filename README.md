@@ -19,9 +19,9 @@ Once you build the project on your local machine, you can try running it using t
 * MySQL - Database System
 ---
 ## Authors ##
-* 
+* [Chandrika Bolla](https://github.com/chandrikabolla)
 ## Contributors ##
-*
+* [Chandrika Bolla](https://github.com/chandrikabolla)
 ## License ##
 MIT
 ## Acknowledgements ##
